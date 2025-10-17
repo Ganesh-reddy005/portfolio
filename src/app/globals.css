@@ -2,10 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-
+/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
+
+/* Better scroll padding to account for fixed elements */
+html {
+  scroll-padding-top: 2rem;
+}
+
+/* Prevent layout shift during animations */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Optimize animations */
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+
+/* ... rest of your CSS ... */
 
 :root {
   --background: #ffffff;

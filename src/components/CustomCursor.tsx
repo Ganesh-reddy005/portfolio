@@ -10,8 +10,29 @@ interface Particle {
 
 export default function CustomCursor() {
   const [particles, setParticles] = useState<Particle[]>([]);
+  const [isEnabled, setIsEnabled] = useState(true);
+
+  // Check localStorage and listen for toggle events
+  useEffect(() => {
+    const saved = localStorage.getItem('cursorEffects');
+    if (saved !== null) {
+      setIsEnabled(saved === 'true');
+    }
+
+    const handleToggle = (e: CustomEvent) => {
+      setIsEnabled(e.detail);
+    };
+
+    window.addEventListener('cursorToggle', handleToggle as EventListener);
+
+    return () => {
+      window.removeEventListener('cursorToggle', handleToggle as EventListener);
+    };
+  }, []);
 
   useEffect(() => {
+    if (!isEnabled) return; // Don't create particles if disabled
+
     let particleId = 0;
 
     const createParticle = (e: MouseEvent) => {
@@ -39,7 +60,9 @@ export default function CustomCursor() {
 
     window.addEventListener('mousemove', handleMove);
     return () => window.removeEventListener('mousemove', handleMove);
-  }, []);
+  }, [isEnabled]); // Re-run when isEnabled changes
+
+  if (!isEnabled) return null; // Don't render anything if disabled
 
   return (
     <div className="pointer-events-none fixed inset-0 z-50">
