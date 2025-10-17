@@ -13,7 +13,7 @@ const contacts = [
 
 export default function Contact() {
   const [terminalLines, setTerminalLines] = useState<string[]>([
-    "Welcome to Ganesh's Terminal v1.0",
+    "Welcome to Ganesh&apos;s Terminal v1.0",
     "Type 'help' to see available commands",
     " ",
   ]);
@@ -44,7 +44,7 @@ export default function Contact() {
       newLines.push("  clear     - Clear terminal");
       newLines.push(" ");
     } else if (cmd === "about") {
-      newLines.push("Hi! I'm Ganesh Reddy");
+      newLines.push("Hi! I&apos;m Ganesh Reddy");
       newLines.push("3rd Year CS Student | AI/ML Enthusiast | Full-Stack Developer");
       newLines.push("Currently building cool stuff with React, FastAPI, and AI 🚀");
       newLines.push(" ");
@@ -56,7 +56,7 @@ export default function Contact() {
       newLines.push(" ");
     } else if (cmd === "clear") {
       setTerminalLines([
-        "Welcome to Ganesh's Terminal v1.0",
+        "Welcome to Ganesh&apos;s Terminal v1.0",
         "Type 'help' to see available commands",
         " ",
       ]);
@@ -216,7 +216,7 @@ export default function Contact() {
             </div>
 
             <p className="text-slate-500 text-sm mt-4 text-center">
-              💡 Tip: Try typing "help" in the terminal
+              💡 Tip: Try typing &quot;help&quot; in the terminal
             </p>
           </motion.div>
         </div>

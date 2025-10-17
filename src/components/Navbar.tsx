@@ -40,7 +40,7 @@ export default function Navbar() {
         const section = document.getElementById(sections[i].id);
         if (section) {
           const sectionTop = section.offsetTop;
-          const sectionHeight = section.offsetHeight;
+          
           
           // Consider section active if we're in the top 40% of it
           if (scrollPosition >= sectionTop - windowHeight / 3) {

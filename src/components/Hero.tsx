@@ -105,7 +105,7 @@ export default function Hero() {
           className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 relative"
         >
           <span className="bg-gradient-to-r from-emerald-400 via-blue-500 to-purple-500 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
-            Hi, I'm Ganesh Reddy
+          Hi! I&apos;m Ganesh Reddy
           </span>
         </motion.h1>
 
@@ -117,7 +117,7 @@ export default function Hero() {
           className="mb-8"
         >
           <p className="text-2xl md:text-3xl text-slate-300 h-12 flex items-center justify-center gap-2">
-            <span className="text-slate-400">I'm a</span>
+            <span className="text-slate-400">I&apos;m a</span>
             <span className="text-emerald-400 font-semibold min-w-[300px] text-left">
               {displayedText}
               <span className="animate-pulse">|</span>
