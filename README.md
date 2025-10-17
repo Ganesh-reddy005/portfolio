@@ -4,7 +4,7 @@ A modern, interactive developer portfolio built with Next.js 14, TypeScript, and
 
 ## 🌟 Live Demo
 
-🔗 **[View Live Portfolio](YOUR_VERCEL_URL_HERE)**
+🔗 **[View Live Portfolio](https://ganeshreddy.vercel.app/)**
 
 ## ✨ Features
 
@@ -144,8 +144,8 @@ This project is open source and available under the [MIT License](LICENSE).
 **Ganesh Reddy**
 
 - GitHub: [@Ganesh-reddy005](https://github.com/Ganesh-reddy005)
-- LinkedIn: [Your LinkedIn](YOUR_LINKEDIN_URL)
-- Email: your.email@example.com
+- LinkedIn: [Your LinkedIn](https://www.linkedin.com/in/ganesh-reddy-23724b296/)
+- Email: b.ganesh.reddy.05@gmail.com
 
 ## 🙏 Acknowledgments
 
