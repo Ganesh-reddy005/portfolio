@@ -5,10 +5,19 @@ import { ExternalLink, Github, Calendar } from 'lucide-react';
 
 const projects = [
   {
+    title: "Radiate-AI Python Package",
+    description: "The fastest way to add RAG (Retrieval-Augmented Generation) to any Python application. Supports multiple LLMs and vector databases with easy integration.",
+    tags: ["Python", "LLMs", "RAG", "PyPI"],
+    github: "https://github.com/Ganesh-reddy005/radiate-ai",
+    live: "https://pypi.org/project/radiate-ai/",
+    date: "Nov 2024",
+    status: "Live",
+  },
+  {
     title: "Fitly - Tailors/Boutique Management System",
     description: "Building a comprehensive SaaS application for managing boutique operations with customer tracking, order management, and analytics dashboard.",
     tags: ["React", "FastAPI", "PostgreSQL", "TypeScript"],
-    github: "https://github.com/yourusername/fitly",
+    github: "https://github.com/Ganesh-reddy005/fitly",
     live: "#",
     date: "Oct 2024 - Present",
     status: "In Development",
@@ -17,7 +26,7 @@ const projects = [
     title: "Portfolio Website",
     description: "Modern, responsive portfolio website with smooth animations and interactive elements built with Next.js and Framer Motion.",
     tags: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
-    github: "https://github.com/yourusername/portfolio",
+    github: "https://github.com/Ganesh-reddy005/portfolio",
     live: "#",
     date: "Oct 2024",
     status: "Live",
@@ -26,7 +35,7 @@ const projects = [
     title: "ML Model Experiments",
     description: "Collection of machine learning experiments using supervised and unsupervised learning techniques on various datasets.",
     tags: ["Python", "Scikit-learn", "NumPy", "Matplotlib"],
-    github: "https://github.com/yourusername/ml-experiments",
+    github: "https://github.com/Ganesh-reddy005/ml-experiments",
     live: "#",
     date: "Jul 2024",
     status: "Ongoing",
@@ -35,22 +44,20 @@ const projects = [
     title: "Data Analysis Dashboard",
     description: "Interactive data visualization dashboard for analyzing datasets with various ML algorithms and insightful visualizations.",
     tags: ["Python", "Pandas", "Plotly", "Scikit-learn"],
-    github: "https://github.com/yourusername/data-dashboard",
+    github: "https://github.com/Ganesh-reddy005/data-dashboard",
     live: "#",
     date: "Aug 2024",
     status: "Completed",
   },
- 
   {
     title: "MCQ Generator using GenAI",
     description: "Built an AI-powered MCQ generator using Streamlit and LangChain to automatically create multiple-choice questions from text input.",
     tags: ["Python", "Streamlit", "LangChain", "GenAI"],
-    github: "https://github.com/yourusername/mcq-generator",
+    github: "https://github.com/Ganesh-reddy005/mcq-generator",
     live: "#",
     date: "Sep 2024",
     status: "Completed",
   }
- 
 ];
 
 export default function Projects() {
