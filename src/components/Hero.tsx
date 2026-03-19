@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ChevronDown, Mail, Github, Sparkles, Download } from 'lucide-react';
+import { ChevronDown, Mail, Github, Download } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { AnimatedGridPattern } from '@/components/ui/animated-grid-pattern';
 import { cn } from '@/lib/utils';

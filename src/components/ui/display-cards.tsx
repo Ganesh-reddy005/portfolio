@@ -40,7 +40,7 @@ export function DisplayCard({
     >
       <div className="flex-1">
         <div className="flex items-center gap-3 mb-3 flex-row">
-          <span className="relative inline-flex items-center justify-center rounded-full bg-emerald-100 p-2">
+          <span className={cn("relative inline-flex items-center justify-center rounded-full bg-emerald-100 p-2", iconClassName)}>
             {icon}
           </span>
           <p className={cn("text-xl font-bold text-slate-800", titleClassName)}>{title}</p>
