@@ -34,7 +34,7 @@ export function DisplayCard({
   return (
     <div
       className={cn(
-        "relative flex min-h-[20rem] w-[22rem] md:w-[28rem] -skew-y-[4deg] flex-col justify-between rounded-xl border border-slate-200 bg-white/90 backdrop-blur-sm p-6 transition-all duration-700 hover:border-emerald-300 hover:bg-white hover:shadow-xl hover:shadow-emerald-500/10 hover:z-50 [&>*]:flex [&>*]:flex-col [&>*]:gap-2 shadow-lg",
+        "relative flex min-h-[20rem] w-[85vw] sm:w-[22rem] md:w-[28rem] -skew-y-[4deg] flex-col justify-between rounded-xl border border-slate-200 bg-white/90 backdrop-blur-sm p-6 transition-all duration-700 hover:border-emerald-300 hover:bg-white hover:shadow-xl hover:shadow-emerald-500/10 hover:z-50 [&>*]:flex [&>*]:flex-col [&>*]:gap-2 shadow-lg shrink-0 snap-center md:snap-align-none",
         className
       )}
     >
@@ -112,21 +112,21 @@ export default function DisplayCards({ cards }: DisplayCardsProps) {
   // If there are more cards, it loops the classes, or we just dynamically generate them
   
   const getCardClasses = (index: number) => {
-    // Mobile: layout as standard flow blocks.
+    // Mobile: layout as standard flow blocks in horizontal scroll.
     // Desktop: absolute stack that fans out on group hover.
     return cn(
       `relative md:absolute md:[grid-area:stack] transition-all duration-500 ease-out md:hover:z-[100] md:hover:scale-105`,
-      index === 0 ? "z-50 md:group-hover:-translate-x-[16rem] md:group-hover:-translate-y-[4rem] lg:group-hover:-translate-x-[20rem] lg:group-hover:-translate-y-[5rem] md:group-hover:rotate-[-5deg]" :
-      index === 1 ? "md:translate-x-4 md:translate-y-4 z-40 md:group-hover:-translate-x-[8rem] md:group-hover:-translate-y-[2rem] lg:group-hover:-translate-x-[10rem] lg:group-hover:-translate-y-[2.5rem] md:group-hover:rotate-[-2deg]" :
-      index === 2 ? "md:translate-x-8 md:translate-y-8 z-30 md:group-hover:translate-x-0 md:group-hover:translate-y-0 md:group-hover:rotate-0" :
-      index === 3 ? "md:translate-x-12 md:translate-y-12 z-20 md:group-hover:translate-x-[8rem] md:group-hover:translate-y-[2rem] lg:group-hover:translate-x-[10rem] lg:group-hover:translate-y-[2.5rem] md:group-hover:rotate-[2deg]" :
-      index === 4 ? "md:translate-x-16 md:translate-y-16 z-10 md:group-hover:translate-x-[16rem] md:group-hover:translate-y-[4rem] lg:group-hover:translate-x-[20rem] lg:group-hover:translate-y-[5rem] md:group-hover:rotate-[5deg]" :
-      `md:translate-x-${(index)*4} md:translate-y-${(index)*4} z-0`
+      index === 0 ? "md:z-50 md:group-hover:-translate-x-[16rem] md:group-hover:-translate-y-[4rem] lg:group-hover:-translate-x-[20rem] lg:group-hover:-translate-y-[5rem] md:group-hover:rotate-[-5deg]" :
+      index === 1 ? "md:translate-x-4 md:translate-y-4 md:z-40 md:group-hover:-translate-x-[8rem] md:group-hover:-translate-y-[2rem] lg:group-hover:-translate-x-[10rem] lg:group-hover:-translate-y-[2.5rem] md:group-hover:rotate-[-2deg]" :
+      index === 2 ? "md:translate-x-8 md:translate-y-8 md:z-30 md:group-hover:translate-x-0 md:group-hover:translate-y-0 md:group-hover:rotate-0" :
+      index === 3 ? "md:translate-x-12 md:translate-y-12 md:z-20 md:group-hover:translate-x-[8rem] md:group-hover:translate-y-[2rem] lg:group-hover:translate-x-[10rem] lg:group-hover:translate-y-[2.5rem] md:group-hover:rotate-[2deg]" :
+      index === 4 ? "md:translate-x-16 md:translate-y-16 md:z-10 md:group-hover:translate-x-[16rem] md:group-hover:translate-y-[4rem] lg:group-hover:translate-x-[20rem] lg:group-hover:translate-y-[5rem] md:group-hover:rotate-[5deg]" :
+      `md:translate-x-${(index)*4} md:translate-y-${(index)*4} md:z-0`
     );
   };
 
   return (
-    <div className="group flex flex-col md:grid md:[grid-template-areas:'stack'] gap-6 md:gap-0 place-items-center opacity-100 animate-in fade-in-0 duration-700 md:min-h-[600px] w-full max-w-6xl mx-auto py-10 md:py-20 lg:hover:w-[120%] lg:hover:-ml-[10%] transition-all">
+    <div className="group flex flex-row overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none md:grid md:[grid-template-areas:'stack'] gap-6 md:gap-0 place-items-center opacity-100 animate-in fade-in-0 duration-700 md:min-h-[600px] w-full max-w-6xl mx-auto py-10 md:py-20 lg:hover:w-[120%] lg:hover:-ml-[10%] transition-all px-6 md:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
       {cards.map((cardProps, index) => (
         <DisplayCard 
           key={index} 

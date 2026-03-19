@@ -71,9 +71,15 @@ export default function Projects() {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Projects</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 mx-auto mb-6"></div>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="hidden md:block text-lg text-slate-600 max-w-2xl mx-auto">
             A stacked overview of my recent work and side projects. Hover to explore!
           </p>
+
+          {/* Mobile Swipe Indicator */}
+          <div className="md:hidden flex items-center justify-center gap-2 mt-4 text-emerald-600 font-medium bg-emerald-50/80 px-4 py-2 rounded-full w-fit mx-auto border border-emerald-100 shadow-sm animate-bounce-horizontal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-left-right opacity-70"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg>
+            <span className="text-sm">Swipe horizontally to explore</span>
+          </div>
         </motion.div>
 
         {/* Interactive Stacked Cards */}
