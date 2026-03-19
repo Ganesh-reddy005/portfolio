@@ -52,7 +52,7 @@ export default function Hero() {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden pb-20">
-      
+
       {/* Massive Background Text */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[70%] md:-translate-y-[60%] pointer-events-none select-none z-0 flex items-center justify-center w-full">
         <h1 className="text-[25vw] md:text-[20vw] font-black text-slate-200/90 md:text-slate-200 whitespace-nowrap tracking-tighter">
@@ -91,15 +91,13 @@ export default function Hero() {
           </p>
         </motion.div>
 
-        {/* Description */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-12 leading-relaxed"
         >
-          Building modern web applications with React, FastAPI, and AI.
-          Currently pursuing B.Tech in Computer Science at Dayananda Sagar University.
+          Love building products, not just features. I am an entrepreneur at heart, deeply passionate about solving real-world problems using AI, LLMs, and scalable architectures.
         </motion.p>
 
         {/* CTA Buttons */}
