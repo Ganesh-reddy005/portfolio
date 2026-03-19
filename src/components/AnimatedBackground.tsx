@@ -4,7 +4,7 @@ export default function AnimatedBackground() {
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
       {/* Base dark gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-slate-100"></div>
       
       {/* Large animated gradient orbs - MORE VISIBLE */}
       <div className="absolute top-0 -left-20 w-[600px] h-[600px] bg-emerald-500/30 rounded-full blur-3xl animate-pulse"></div>
@@ -17,15 +17,15 @@ export default function AnimatedBackground() {
         className="absolute inset-0 opacity-10"
         style={{
           backgroundImage: `
-            linear-gradient(to right, rgb(100, 116, 139) 1px, transparent 1px),
-            linear-gradient(to bottom, rgb(100, 116, 139) 1px, transparent 1px)
+            linear-gradient(to right, rgb(226, 232, 240) 1px, transparent 1px),
+            linear-gradient(to bottom, rgb(226, 232, 240) 1px, transparent 1px)
           `,
           backgroundSize: '60px 60px'
         }}
       ></div>
       
       {/* Vignette effect */}
-      <div className="absolute inset-0 bg-gradient-radial from-transparent via-slate-900/30 to-slate-950/80"></div>
+      <div className="absolute inset-0 bg-gradient-radial from-transparent via-white/30 to-slate-100/80"></div>
     </div>
   );
 }

@@ -98,9 +98,9 @@ export default function Navbar() {
                     x: isHovered ? 0 : 10
                   }}
                   transition={{ duration: 0.2 }}
-                  className="absolute right-14 bg-slate-900/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-slate-700/50 whitespace-nowrap"
+                  className="absolute right-14 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-slate-200 whitespace-nowrap"
                 >
-                  <span className="text-sm font-medium text-white">{item.name}</span>
+                  <span className="text-sm font-medium text-slate-900">{item.name}</span>
                 </motion.div>
 
                 {/* Dot */}
@@ -138,7 +138,7 @@ export default function Navbar() {
                       exit={{ scale: 0, opacity: 0 }}
                       className="absolute inset-0 flex items-center justify-center"
                     >
-                      <Icon className="w-4 h-4 text-white" />
+                      <Icon className="w-4 h-4 text-slate-900" />
                     </motion.div>
                   )}
                 </a>
@@ -148,12 +148,12 @@ export default function Navbar() {
         </div>
 
         {/* Progress line connecting dots */}
-        <div className="absolute right-[6px] top-0 bottom-0 w-[2px] bg-slate-800/50 -z-10"></div>
+        <div className="absolute right-[6px] top-0 bottom-0 w-[2px] bg-slate-100/80 -z-10"></div>
       </nav>
 
       {/* Mobile - Bottom Navigation Bar */}
       <nav className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
-        <div className="bg-slate-900/90 backdrop-blur-md border-t border-slate-700/50 px-4 py-3">
+        <div className="bg-white/90 backdrop-blur-md border-t border-slate-200 px-4 py-3">
           <div className="flex justify-around items-center max-w-md mx-auto">
             {navItems.map((item) => {
               const Icon = item.icon;
@@ -180,7 +180,7 @@ export default function Navbar() {
                       className={`w-5 h-5 ${
                         isActive 
                           ? 'text-emerald-400' 
-                          : 'text-slate-400'
+                          : 'text-slate-600'
                       }`}
                     />
                     {isActive && (

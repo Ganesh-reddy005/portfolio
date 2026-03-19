@@ -38,9 +38,9 @@ export default function About() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">About Me</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">About Me</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 mx-auto mb-8"></div>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             A passionate third-year CS student building modern web applications and exploring AI/ML. 
             Currently developing Fitly - a boutique management SaaS platform.
           </p>
@@ -60,7 +60,7 @@ export default function About() {
               <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-emerald-500 to-blue-500 bg-clip-text text-transparent mb-2">
                 {stat.value}
               </div>
-              <div className="text-slate-400 text-sm md:text-base">{stat.label}</div>
+              <div className="text-slate-600 text-sm md:text-base">{stat.label}</div>
             </motion.div>
           ))}
         </div>
@@ -71,7 +71,7 @@ export default function About() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-2xl md:text-3xl font-bold text-white mb-8 text-center"
+          className="text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center"
         >
           Technical Arsenal
         </motion.h3>
@@ -82,7 +82,7 @@ export default function About() {
           {/* Row 1 - Frontend & Languages (Emerald Gradient) */}
           <div className="relative">
             <motion.div
-              animate={{ x: [0, -1000] }}
+              animate={{ x: ["0%", "-50%"] }}
               transition={{
                 duration: 25,
                 repeat: Infinity,
@@ -95,7 +95,7 @@ export default function About() {
                   key={index}
                   whileHover={{ scale: 1.15 }}
                   transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                  className="px-6 py-3 bg-slate-900/20 backdrop-blur-md rounded-full border border-slate-700/50 font-medium transition-all cursor-pointer hover:shadow-lg hover:shadow-emerald-500/30"
+                  className="px-6 py-3 bg-white/60 backdrop-blur-md rounded-full border border-slate-200 font-medium transition-all cursor-pointer hover:shadow-lg hover:shadow-emerald-500/30"
                 >
                   <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent hover:from-emerald-300 hover:to-cyan-300">
                     {skill}
@@ -108,7 +108,7 @@ export default function About() {
           {/* Row 2 - Databases & DevOps (Blue Gradient) */}
           <div className="relative">
             <motion.div
-              animate={{ x: [-1000, 0] }}
+              animate={{ x: ["-50%", "0%"] }}
               transition={{
                 duration: 30,
                 repeat: Infinity,
@@ -121,7 +121,7 @@ export default function About() {
                   key={index}
                   whileHover={{ scale: 1.15 }}
                   transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                  className="px-6 py-3 bg-slate-900/20 backdrop-blur-md rounded-full border border-slate-700/50 font-medium transition-all cursor-pointer hover:shadow-lg hover:shadow-blue-500/30"
+                  className="px-6 py-3 bg-white/60 backdrop-blur-md rounded-full border border-slate-200 font-medium transition-all cursor-pointer hover:shadow-lg hover:shadow-blue-500/30"
                 >
                   <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent hover:from-blue-300 hover:to-indigo-300">
                     {skill}
@@ -134,7 +134,7 @@ export default function About() {
           {/* Row 3 - Backend & AI/ML (Amber Gradient) */}
           <div className="relative">
             <motion.div
-              animate={{ x: [0, -1000] }}
+              animate={{ x: ["0%", "-50%"] }}
               transition={{
                 duration: 20,
                 repeat: Infinity,
@@ -147,7 +147,7 @@ export default function About() {
                   key={index}
                   whileHover={{ scale: 1.15 }}
                   transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                  className="px-6 py-3 bg-slate-900/20 backdrop-blur-md rounded-full border border-slate-700/50 font-medium transition-all cursor-pointer hover:shadow-lg hover:shadow-amber-500/30"
+                  className="px-6 py-3 bg-white/60 backdrop-blur-md rounded-full border border-slate-200 font-medium transition-all cursor-pointer hover:shadow-lg hover:shadow-amber-500/30"
                 >
                   <span className="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent hover:from-amber-300 hover:to-orange-300">
                     {skill}

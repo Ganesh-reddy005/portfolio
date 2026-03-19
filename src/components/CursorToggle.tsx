@@ -30,7 +30,7 @@ export default function CursorToggle() {
       className={`fixed bottom-8 left-8 z-50 p-3 rounded-full backdrop-blur-md border transition-all group ${
         isEnabled
           ? 'bg-emerald-500/20 border-emerald-500/50 hover:bg-emerald-500/30'
-          : 'bg-slate-800/50 border-slate-700/50 hover:bg-slate-700/50'
+          : 'bg-slate-100/80 border-slate-200 hover:bg-slate-200/80'
       }`}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
@@ -42,7 +42,7 @@ export default function CursorToggle() {
         }`}
       />
       
-      <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1.5 bg-slate-900 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+      <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1.5 bg-white text-slate-900 text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
         {isEnabled ? 'Cursor Effects: ON' : 'Cursor Effects: OFF'}
       </span>
     </motion.button>

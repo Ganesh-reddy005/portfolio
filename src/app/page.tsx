@@ -33,8 +33,8 @@ export default function Home() {
       <main>
         <Hero />
         <About />
-        <Education />
         <Projects />
+        <Education />
         <Contact />
       </main>
       <Footer />  {/* ADD THIS */}

@@ -7,7 +7,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative py-8 px-4 border-t border-slate-800/50 bg-slate-950/50 backdrop-blur-md">
+    <footer className="relative py-8 px-4 border-t border-slate-200 bg-slate-50/80 backdrop-blur-md">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -17,7 +17,7 @@ export default function Footer() {
           className="text-center"
         >
           {/* Copyright */}
-          <p className="text-slate-400 text-sm mb-2">
+          <p className="text-slate-600 text-sm mb-2">
             © {currentYear} Ganesh Reddy. All rights reserved.
           </p>
           

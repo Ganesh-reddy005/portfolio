@@ -127,9 +127,9 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Get In Touch</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Get In Touch</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 mx-auto mb-6"></div>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Feel free to reach out through any platform. Or try the terminal below!
           </p>
         </motion.div>
@@ -143,7 +143,7 @@ export default function Contact() {
             viewport={{ once: true }}
             className="space-y-4"
           >
-            <h3 className="text-xl font-bold text-white mb-6">Quick Connect</h3>
+            <h3 className="text-xl font-bold text-slate-900 mb-6">Quick Connect</h3>
             {contacts.map((contact, index) => {
               const Icon = contact.icon;
               return (
@@ -157,14 +157,14 @@ export default function Contact() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                   whileHover={{ x: 5 }}
-                  className="flex items-center gap-4 bg-slate-900/20 backdrop-blur-md rounded-lg p-4 border border-slate-700/50 hover:border-emerald-500/50 transition-all group"
+                  className="flex items-center gap-4 bg-white/60 backdrop-blur-md rounded-lg p-4 border border-slate-200 hover:border-emerald-500/50 transition-all group"
                 >
                   <div className="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center group-hover:bg-emerald-500/20 transition-colors">
                     <Icon className="w-5 h-5 text-emerald-400" />
                   </div>
                   <div className="flex-1">
-                    <p className="text-sm text-slate-400">{contact.name}</p>
-                    <p className="text-white font-medium">{contact.handle}</p>
+                    <p className="text-sm text-slate-600">{contact.name}</p>
+                    <p className="text-slate-900 font-medium">{contact.handle}</p>
                   </div>
                   <ChevronRight className="w-5 h-5 text-slate-600 group-hover:text-emerald-400 transition-colors" />
                 </motion.a>
@@ -178,9 +178,9 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <div className="bg-slate-950/80 backdrop-blur-md rounded-2xl border border-slate-700/50 overflow-hidden shadow-2xl">
+            <div className="bg-slate-900/90 backdrop-blur-md rounded-2xl border border-slate-700/50 overflow-hidden shadow-2xl">
               {/* Terminal Header */}
-              <div className="bg-slate-900/80 px-4 py-3 border-b border-slate-700/50 flex items-center gap-2">
+              <div className="bg-slate-950/80 px-4 py-3 border-b border-slate-800/50 flex items-center gap-2">
                 <div className="flex gap-2">
                   <div className="w-3 h-3 rounded-full bg-red-500"></div>
                   <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
@@ -188,7 +188,7 @@ export default function Contact() {
                 </div>
                 <div className="flex-1 flex items-center justify-center gap-2">
                   <Terminal className="w-4 h-4 text-emerald-400" />
-                  <span className="text-slate-400 text-sm font-mono">ganesh@terminal</span>
+                  <span className="text-slate-600 text-sm font-mono">ganesh@terminal</span>
                 </div>
               </div>
 

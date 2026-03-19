@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { GraduationCap, Award, Calendar, MapPin, Trophy, CheckCircle2, Briefcase } from 'lucide-react';
+import { GraduationCap, Award, Calendar, MapPin, Trophy, CheckCircle2, Briefcase, Sparkles } from 'lucide-react';
 
 const education = {
   university: "Dayananda Sagar University",
@@ -42,7 +42,7 @@ const achievements = [
 
 export default function Education() {
   return (
-    <section id="education" className="min-h-screen py-20 px-4 relative overflow-hidden">
+    <section id="education" className="min-h-screen py-20 px-4 relative overflow-hidden bg-slate-50/50">
       <div className="max-w-6xl mx-auto">
         
         {/* Header */}
@@ -53,56 +53,95 @@ export default function Education() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Education & Experience</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Background</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 mx-auto mb-6"></div>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            My academic journey, professional experience, and continuous learning path.
+          </p>
         </motion.div>
 
-        {/* Education & Experience Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          {/* Education Card */}
+        {/* Bento Grid layout */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:auto-rows-[minmax(0,_1fr)]">
+          
+          {/* Education Card (Spans 2 cols) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="md:col-span-2 relative overflow-hidden rounded-3xl bg-white border border-slate-200 p-8 shadow-sm hover:shadow-md transition-all group lg:min-h-[22rem]"
           >
-            <div className="bg-gradient-to-br from-emerald-500/10 to-blue-500/10 backdrop-blur-md rounded-xl p-6 border border-emerald-500/30 h-full relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl"></div>
-              <div className="relative z-10">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <GraduationCap className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl md:text-2xl font-bold text-white mb-1">{education.university}</h3>
-                    <p className="text-base text-emerald-400 font-semibold">{education.degree}</p>
-                    <p className="text-slate-300 text-sm">Specialization in {education.specialization}</p>
-                  </div>
+            <div className="absolute -bottom-6 -right-6 opacity-5 group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-500">
+              <GraduationCap className="w-64 h-64 text-slate-900" />
+            </div>
+            
+            <div className="relative z-10 flex flex-col h-full justify-between gap-8">
+              <div>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100/50 text-emerald-600 text-sm font-semibold mb-6">
+                  <Sparkles className="w-4 h-4" />
+                  Education
                 </div>
+                <h3 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-2">{education.university}</h3>
+                <p className="text-xl text-slate-600 font-medium mb-1">{education.degree}</p>
+                <p className="text-slate-500">Specialization in <strong className="text-emerald-600">{education.specialization}</strong></p>
+              </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                  <div className="flex items-center gap-2 bg-slate-900/30 rounded-lg p-3">
-                    <Award className="w-4 h-4 text-emerald-400" />
-                    <div>
-                      <p className="text-slate-400 text-xs">CGPA</p>
-                      <p className="text-white font-bold text-lg">{education.cgpa}/10</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2 bg-slate-900/30 rounded-lg p-3">
-                    <Calendar className="w-4 h-4 text-blue-400" />
-                    <div>
-                      <p className="text-slate-400 text-xs">Duration</p>
-                      <p className="text-white font-semibold text-sm">{education.duration}</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2 bg-slate-900/30 rounded-lg p-3">
-                    <MapPin className="w-4 h-4 text-purple-400" />
-                    <div>
-                      <p className="text-slate-400 text-xs">Location</p>
-                      <p className="text-white font-semibold text-sm">{education.location}</p>
-                    </div>
-                  </div>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div className="flex flex-col gap-1 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                  <span className="flex items-center gap-2 text-slate-500 text-sm font-medium">
+                    <Award className="w-4 h-4 text-emerald-500" /> CGPA
+                  </span>
+                  <span className="text-slate-900 font-bold text-xl">{education.cgpa}<span className="text-slate-400 text-base">/10</span></span>
                 </div>
+                <div className="flex flex-col gap-1 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                  <span className="flex items-center gap-2 text-slate-500 text-sm font-medium">
+                    <Calendar className="w-4 h-4 text-blue-500" /> Timeline
+                  </span>
+                  <span className="text-slate-900 font-bold text-base mt-auto">{education.duration}</span>
+                </div>
+                <div className="flex flex-col gap-1 bg-slate-50 p-4 rounded-2xl border border-slate-100 col-span-2 md:col-span-1">
+                  <span className="flex items-center gap-2 text-slate-500 text-sm font-medium">
+                    <MapPin className="w-4 h-4 text-purple-500" /> Location
+                  </span>
+                  <span className="text-slate-900 font-bold text-base mt-auto">{education.location}</span>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Certifications Card (Dark contrast, Spans 2 rows down) - Placed right on desktop */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="md:row-span-2 relative overflow-hidden rounded-3xl bg-slate-900 p-8 shadow-xl flex flex-col"
+          >
+            <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-blue-500/20 to-transparent pointer-events-none"></div>
+            
+            <div className="relative z-10 flex-1 flex flex-col">
+              <div className="inline-flex items-center self-start gap-2 px-3 py-1 rounded-full bg-white/10 text-white text-sm font-semibold mb-6">
+                <Award className="w-4 h-4" />
+                Certifications
+              </div>
+              
+              <div className="space-y-5 flex-1 overflow-y-auto pr-2">
+                {certifications.map((cert) => (
+                  <div key={cert.name} className="group cursor-default">
+                    <div className="flex items-start gap-3">
+                      <div className="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-blue-500/20 transition-colors">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-blue-400" />
+                      </div>
+                      <div>
+                        <h4 className="text-slate-100 font-medium leading-snug group-hover:text-blue-400 transition-colors">{cert.name}</h4>
+                        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center mt-1">
+                          <span className="text-slate-400 text-sm">{cert.org}</span>
+                          <span className="text-slate-500 text-xs font-mono">{cert.date}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </motion.div>
@@ -111,125 +150,60 @@ export default function Education() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="relative overflow-hidden rounded-3xl bg-blue-50/50 border border-blue-100/50 p-8 hover:bg-blue-50 transition-colors group flex flex-col"
           >
-            <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 backdrop-blur-md rounded-xl p-6 border border-blue-500/30 h-full relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl"></div>
-              <div className="relative z-10">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Briefcase className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl md:text-2xl font-bold text-white mb-1">Professional Experience</h3>
-                    <p className="text-base text-blue-400 font-semibold">Leadership & Membership</p>
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  {experience.map((exp) => (
-                    <div key={exp.org} className="bg-slate-900/30 rounded-lg p-4 border border-slate-700/50">
-                      <div className="flex justify-between items-start mb-2">
-                        <h4 className="text-white font-bold">{exp.org}</h4>
-                        <span className="text-xs font-semibold px-2 py-1 bg-blue-500/20 text-blue-400 rounded-full">
-                          {exp.role}
-                        </span>
-                      </div>
-                      <p className="text-slate-400 text-sm leading-relaxed">
-                        {exp.description}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
+            <div className="inline-flex items-center self-start gap-2 px-3 py-1 rounded-full bg-blue-100/80 text-blue-600 text-sm font-semibold mb-6">
+              <Briefcase className="w-4 h-4" />
+              Experience
             </div>
-          </motion.div>
-        </div>
-
-        {/* Grid Layout: Certifications (Left) + Achievement (Right) */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-7">
-          
-          {/* Certifications */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-          >
-            <h3 className="text-2xl font-bold text-white mb-6">Industry Certifications</h3>
-            <div className="bg-slate-900/10 backdrop-blur-md rounded-xl p-6 border border-slate-700/50">
-              <div className="space-y-4">
-                {certifications.map((cert, index) => (
-                  <motion.div
-                    key={cert.name}
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1, duration: 0.4 }}
-                    whileHover={{ x: 5 }}
-                    className="flex items-start gap-3 group"
-                  >
-                    <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
-                    <div className="flex-1">
-                      <div className="flex justify-between items-start mb-1">
-                        <h4 className="text-white font-semibold group-hover:text-emerald-400 transition-colors">
-                          {cert.name}
-                        </h4>
-                        <span className="text-xs text-slate-500 font-medium">{cert.date}</span>
-                      </div>
-                      <p className="text-slate-400 text-sm">{cert.org}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
+            
+            <div className="space-y-6 flex-1">
+              {experience.map((exp) => (
+                <div key={exp.org} className="flex flex-col h-full">
+                  <h4 className="text-xl font-bold text-slate-900 mb-1 leading-tight">{exp.org}</h4>
+                  <p className="text-blue-600 font-medium mb-3">{exp.role}</p>
+                  <p className="text-slate-600 text-sm leading-relaxed mb-4">{exp.description}</p>
+                </div>
+              ))}
             </div>
           </motion.div>
 
-          {/* Achievement */}
+          {/* Achievement Card */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="md:col-span-1 relative overflow-hidden rounded-3xl bg-amber-50/50 border border-amber-100/50 p-8 hover:bg-amber-50 transition-colors group flex flex-col"
           >
-            <h3 className="text-2xl font-bold text-white mb-6">Recent Achievement</h3>
+            <div className="inline-flex items-center self-start gap-2 px-3 py-1 rounded-full bg-amber-100/80 text-amber-600 text-sm font-semibold mb-6">
+              <Trophy className="w-4 h-4" />
+              Achievements
+            </div>
+
             {achievements.map((achievement) => (
-              <div
-                key={achievement.title}
-                className="bg-gradient-to-br from-amber-500/10 to-orange-500/10 backdrop-blur-md rounded-xl p-6 border border-amber-500/30 relative overflow-hidden h-fit"
-              >
-                <div className="absolute top-0 right-0 w-24 h-24 bg-amber-500/10 rounded-full blur-2xl"></div>
+              <div key={achievement.title} className="flex flex-col h-full">
+                <div className="flex justify-between items-start mb-2">
+                  <h4 className="text-lg font-bold text-slate-900 leading-snug">{achievement.title}</h4>
+                </div>
+                <p className="text-amber-600 font-medium text-sm mb-3">{achievement.organizer}</p>
                 
-                <div className="relative z-10">
-                  <div className="flex items-start gap-3 mb-4">
-                    <div className="w-10 h-10 bg-gradient-to-r from-amber-500 to-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Trophy className="w-5 h-5 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-start gap-2 mb-1 flex-wrap">
-                        <h4 className="text-lg font-bold text-white">{achievement.title}</h4>
-                        <span className="px-2 py-0.5 bg-amber-500/20 text-amber-400 text-xs font-semibold rounded-full">
-                          {achievement.year}
-                        </span>
-                      </div>
-                      <p className="text-amber-400 text-sm font-semibold mb-2">{achievement.organizer}</p>
-                      <p className="text-slate-300 text-sm mb-3">{achievement.description}</p>
-                      
-                      <div className="bg-slate-900/30 rounded-lg p-3">
-                        <p className="text-slate-400 text-xs mb-1">
-                          Team: <span className="text-emerald-400 font-semibold">{achievement.team}</span>
-                        </p>
-                        <p className="text-slate-500 text-xs">
-                          Teammates: {achievement.teammates.join(", ")}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                <p className="text-slate-600 text-sm mb-4 line-clamp-2">{achievement.description}</p>
+                
+                <div className="mt-auto px-4 py-3 bg-white/60 rounded-xl border border-slate-100/50">
+                  <p className="text-slate-500 text-xs mb-1">
+                    Team: <strong className="text-slate-900">{achievement.team}</strong>
+                  </p>
+                  <p className="text-slate-500 text-xs truncate">
+                    With {achievement.teammates.join(", ")}
+                  </p>
                 </div>
               </div>
             ))}
           </motion.div>
+
         </div>
       </div>
     </section>
