@@ -52,17 +52,26 @@ export default function Hero() {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden pb-20">
+      
+      {/* Massive Background Text */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[70%] md:-translate-y-[60%] pointer-events-none select-none z-0 flex items-center justify-center w-full">
+        <h1 className="text-[25vw] md:text-[20vw] font-black text-slate-200/90 md:text-slate-200 whitespace-nowrap tracking-tighter">
+          PORTFOLIO
+        </h1>
+      </div>
+
       <div className="max-w-5xl mx-auto text-center relative z-10">
 
-        {/* Name with Animated Gradient */}
+        {/* Name with Outline Effect */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 relative"
+          className="text-5xl md:text-7xl lg:text-[7rem] font-bold mb-6 relative leading-tight"
         >
-          <span className="bg-gradient-to-r from-emerald-400 via-blue-500 to-purple-500 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
-            Hi! I&apos;m Ganesh Reddy
+          <span className="text-slate-900 block md:inline">Hi! I&apos;m </span>
+          <span className="text-transparent [-webkit-text-stroke:2px_#0f172a] md:ml-4 tracking-tight">
+            Ganesh Reddy
           </span>
         </motion.h1>
 
